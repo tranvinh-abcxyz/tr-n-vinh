@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Dương ❤️</title>
+    <style>
+        body {
+            background-color: #ffb6c1; /* Nền màu hồng nhạt */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 85%;
+        }
+
+        /* Khung hiển thị ảnh dạng bo góc/tròn xinh xắn */
+        .img-container {
+            width: 100%;
+            max-width: 250px;
+            height: 250px;
+            margin: 0 auto 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.2);
+            border: 4px solid #fff;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: #d81b60;
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #text-container {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+            min-height: 80px;
+            white-space: pre-line;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: #d81b60;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Thẻ hiển thị ảnh -->
+        <div class="img-container">
+            <audio controls src="cte.mp4"pig=>
+        </div>
+
+        <h1>Gửi tới hà hương nè   😜</h1>
+        <div id="text-container"><span id="typed-text"></span><span class="cursor">&nbsp;</span></div>
+    </div>
+
+    <script>
+        const text = "Chào hà phương nè! ✨\nChúc em  một ngày thật đẹp, luôn vui vẻ và ngập tràn hạnh phúc nhé! 💕";
+        
+        let index = 0;
+        const speed = 80;
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typed-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+
+</body>
+</html>
